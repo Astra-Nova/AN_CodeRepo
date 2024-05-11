@@ -50,7 +50,7 @@ void AEnemy::BeginPlay()
 
 	Tags.Add(FName("Enemy"));
 
-	EnemyController = Cast<AEnemyController>(GetController());
+	/*EnemyController = Cast<AEnemyController>(GetController());
 	Player = Cast<AMyCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), AMyCharacter::StaticClass()));
 	
 	if (EnemyController)
@@ -61,7 +61,7 @@ void AEnemy::BeginPlay()
 	}
 
 	// Executing the behavior tree 
-	EnemyController->RunBehaviorTree(BehaviorTree);
+	EnemyController->RunBehaviorTree(BehaviorTree);*/
 
 
 
@@ -79,13 +79,13 @@ void AEnemy::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 
-	if (EnemyController->GetBehaviorTreeComponent() && EnemyController->GetBlackboardComponent())
+	/*if (EnemyController->GetBehaviorTreeComponent() && EnemyController->GetBlackboardComponent())
 	{
 		 uint8 State = (EnemyController->GetBlackboardComponent()->GetValueAsEnum(TEXT("CurrentState")));
 
 		CurrentState = static_cast<EEnemyState>(State);
 
-	}
+	}*/
 
 	/*if (EnemyState > EEnemyState::EES_Patrolling) 
 	{
