@@ -49,22 +49,7 @@ void AEnemy::BeginPlay()
 	Super::BeginPlay();
 
 	Tags.Add(FName("Enemy"));
-
-	/*EnemyController = Cast<AEnemyController>(GetController());
-	Player = Cast<AMyCharacter>(UGameplayStatics::GetActorOfClass(GetWorld(), AMyCharacter::StaticClass()));
 	
-	if (EnemyController)
-	{
-
-		EnemyController->GetBlackboardComponent()->SetValueAsObject(TEXT("Target"), Player);
-		//EnemyController->GetBlackboardComponent()->SetValueAsEnum(TEXT("State"), (uint8)EnemyState);
-	}
-
-	// Executing the behavior tree 
-	EnemyController->RunBehaviorTree(BehaviorTree);*/
-
-
-
 }
 
 void AEnemy::HandleDamage(float DamageAmount)
@@ -77,24 +62,7 @@ void AEnemy::HandleDamage(float DamageAmount)
 void AEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-
-	/*if (EnemyController->GetBehaviorTreeComponent() && EnemyController->GetBlackboardComponent())
-	{
-		 uint8 State = (EnemyController->GetBlackboardComponent()->GetValueAsEnum(TEXT("CurrentState")));
-
-		CurrentState = static_cast<EEnemyState>(State);
-
-	}*/
-
-	/*if (EnemyState > EEnemyState::EES_Patrolling) 
-	{
-		CheckCombatTarget();
-	}
-	else
-	{
-		CheckPatrolTarget();
-	}*/
+	
 }
 
 float AEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
