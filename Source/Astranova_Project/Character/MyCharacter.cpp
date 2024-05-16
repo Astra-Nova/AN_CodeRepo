@@ -630,7 +630,7 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AMyCharacter::Move);
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Completed, this, &AMyCharacter::Stop);
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMyCharacter::Look);
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Ongoing, this, &AMyCharacter::Jump);
+		//EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Ongoing, this, &AMyCharacter::Jump);
 		
 		EnhancedInputComponent->BindAction(ShiftKeyAction, ETriggerEvent::Triggered, this, &AMyCharacter::ShiftKeyDown);
 		EnhancedInputComponent->BindAction(ShiftKeyAction, ETriggerEvent::Completed, this, &AMyCharacter::ShiftKeyUp);
